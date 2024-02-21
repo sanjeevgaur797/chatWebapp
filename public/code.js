@@ -1,7 +1,7 @@
 (function () {
   //   console.log("opioioio ");
   const app = document.querySelector(".app");
-  const socket = io();
+  const socket = io("https://chat-webapp-agup.vercel.app");
 
   let uname;
   // join screen
