@@ -27,6 +27,7 @@ io.on("connection", function (socket) {
     history.push(message);
   });
 });
-server.listen(5000, (token) => {
-  console.log(token, "--=-=---900-9");
+const port = process.env.VERCEL_URL ? process.env.VERCEL_URL : 3000;
+server.listen(port, (token) => {
+  console.log(`listening on *:${port}`);
 });
