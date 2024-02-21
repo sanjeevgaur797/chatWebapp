@@ -4,10 +4,9 @@ const app = express();
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 const moment = require("moment");
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  next();
-});
+const cors = require("cors"); // Require the cors package
+app.use(cors());
+
 app.use(express.static(path.join(__dirname + "/public")));
 const history = [];
 // when user is created frist time
