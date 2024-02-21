@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>home page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="screen join-screen active">
+        <div class="form">
+          <h2>Join chatroom</h2>
+          <div class="form-input">
+            <label>User</label>
+            <input
+              type="text"
+              placeholder="please enter name..."
+              id="username"
+            />
+          </div>
+          <div class="form-input">
+            <label>User Name : </label>
+            <button id="join-user">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="screen chat-screen">
+        <div class="header">
+          <div class="logo">Chatroom</div>
+          <button id="exit-chat">Exit</button>
+        </div>
+
+        <div class="messages">
+          <!-- dummy message -->
+          <!-- <div class="message my-message">
+            <div>
+              <div class="name">you</div>
+              <div class="text">Hi</div>
+            </div>
+          </div> -->
+          <!-- left or join message -->
+          <!-- <div class="update">Abc is joined this conversation</div> -->
+          <!-- other side message -->
+          <!-- <div class="message other-message">
+            <div>
+              <div class="name">Abc</div>
+              <div class="text">Hi</div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="typebox">
+          <input
+            type="text"
+            placeholder="please enter name..."
+            id="message-input"
+          />
+          <button id="send-message">send</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  </body>
+</html>
